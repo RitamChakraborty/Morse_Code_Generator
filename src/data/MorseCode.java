@@ -6,7 +6,7 @@ import java.util.Map;
 public class MorseCode {
     protected Map<Character, String> morseCodeList;
 
-    public MorseCode() {
+    protected MorseCode() {
         morseCodeList = new HashMap<>();
 
         morseCodeList.put(' ', "/");

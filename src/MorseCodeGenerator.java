@@ -7,7 +7,7 @@ public class MorseCodeGenerator extends MorseCode {
     private StringBuilder morseCode;
     private char[] charArray;
 
-    public MorseCodeGenerator(String text) {
+    MorseCodeGenerator(String text) {
         this.text = text;
         morseCode = new StringBuilder();
     }
@@ -17,20 +17,19 @@ public class MorseCodeGenerator extends MorseCode {
     }
 
     private void setMorseCode() {
-        for (char ch: charArray) {
-            if (morseCodeList.containsKey(Character.valueOf(ch))) {
-                morseCode.append(morseCodeList.get(Character.valueOf(ch))).append(" ");
+        for (char ch: charArray)
+            if (morseCodeList.containsKey(ch)) {
+                morseCode.append(morseCodeList.get(ch)).append(" ");
             } else {
                 throw new InputMismatchException(ch + " is not found in Morse Code");
             }
-        }
     }
 
     public String getText() {
         return text;
     }
 
-    public String getMorseCode() {
+    String getMorseCode() {
         setCharArray();
         setMorseCode();
         return morseCode.toString();
