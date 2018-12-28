@@ -6,5 +6,9 @@ public class Main {
 
         System.out.println("Enter text: ");
         string = new Scanner(System.in).nextLine();
+
+        MorseCodeGenerator generator = new MorseCodeGenerator(string);
+
+        System.out.println("Morse code: " + generator.getMorseCode());
     }
 }
