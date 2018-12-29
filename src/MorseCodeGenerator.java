@@ -25,6 +25,10 @@ public class MorseCodeGenerator extends MorseCode {
             }
     }
 
+    public void setSpaceChar(String ch) {
+        super.setSpaceChar(ch);
+    }
+
     public String getText() {
         return text;
     }

@@ -6,6 +6,10 @@ import java.util.Map;
 public class MorseCode {
     protected Map<Character, String> morseCodeList;
 
+    protected void setSpaceChar(String ch) {
+        morseCodeList.replace(' ', ch);
+    }
+
     protected MorseCode() {
         morseCodeList = new HashMap<>();
 
