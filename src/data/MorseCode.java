@@ -10,6 +10,26 @@ public class MorseCode {
         morseCodeList.replace(' ', ch);
     }
 
+    protected void setShortAndLongDelay(String shortDelay, String longDelay) {
+        for (char ch: morseCodeList.keySet()) {
+            if (ch != ' ') {
+                String morseCode = morseCodeList.get(ch);
+                char[] chars = morseCode.toCharArray();
+                StringBuilder stringBuilder = new StringBuilder();
+
+                for (char chr: chars) {
+                    if (chr == '.') {
+                        stringBuilder.append(shortDelay);
+                    } else {
+                        stringBuilder.append(longDelay);
+                    }
+                }
+
+                morseCodeList.put(ch, stringBuilder.toString());
+            }
+        }
+    }
+
     protected MorseCode() {
         morseCodeList = new HashMap<>();
 

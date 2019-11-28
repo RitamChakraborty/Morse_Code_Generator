@@ -29,6 +29,10 @@ public class MorseCodeGenerator extends MorseCode {
         super.setSpaceChar(ch);
     }
 
+    public void setShortAndLongDelay(String shortDelay, String longDelay) {
+        super.setShortAndLongDelay(shortDelay, longDelay);
+    }
+
     public String getText() {
         return text;
     }
